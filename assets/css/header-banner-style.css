@@ -1,0 +1,1134 @@
+/*@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+@font-face {
+  font-family: 'Whyte Inktrap';
+  src: url('../fonts/WhyteInktrap-Bold.woff2') format('woff2'),
+    url('../fonts/WhyteInktrap-Bold.woff') format('woff');
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Whyte Inktrap';
+  src: url('../fonts/WhyteInktrap-Light.woff2') format('woff2'),
+    url('../fonts/WhyteInktrap-Light.woff') format('woff');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Whyte Inktrap';
+  src: url('../fonts/WhyteInktrap-Black.woff2') format('woff2'),
+    url('../fonts/WhyteInktrap-Black.woff') format('woff');
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Whyte Inktrap';
+  src: url('../fonts/WhyteInktrap-Medium.woff2') format('woff2'),
+    url('../fonts/WhyteInktrap-Medium.woff') format('woff');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Parabole';
+  src: url('../fonts/Parabole.woff2') format('woff2'),
+    url('../fonts/Parabole.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Whyte Inktrap';
+  src: url('../fonts/WhyteInktrap-Regular.woff2') format('woff2'),
+    url('../fonts/WhyteInktrap-Regular.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+*/
+:root {
+
+  --white: #FFFFFF;
+  --black-1: #000000;
+  --black-2: #0C0C0C;
+  --black-3: #1B1B1B;
+  --black-4: #252525;
+  --black-5: #313131;
+  --orange-1: #FF6801;
+  --orange-2: #FF7A1F;
+  --orange-3: #FF9247;
+  --orange-4: #FFAA71;
+  --orange-5: #FFB98B;
+}
+
+/* Header Section CSS Start */
+
+.site-header {
+  position: relative;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 999;
+  padding: 16px 20px;
+}
+
+.site-header__inner {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  justify-content: space-between;
+  padding: 15px 20px 0;
+  border-top: 1px solid var(--white);
+  position: relative;
+}
+
+.site-header__inner:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 1px;
+  height: 14.5px;
+  background: var(--white);
+}
+
+.site-header__inner:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 1px;
+  height: 14.5px;
+  background: var(--white);
+}
+
+.site-header__left {
+  display: flex;
+  align-items: center;
+  gap: 80px;
+}
+
+
+.site-header__nav {
+  display: block;
+  position: relative;
+  padding-right: 20px;
+}
+
+.site-header__nav:after {
+  content: "";
+  position: absolute;
+  top: -20px;
+  right: 0;
+  width: 1px;
+  height: 14.5px;
+  background: var(--white);
+}
+
+.site-header__menu {
+  display: flex;
+  gap: 5px;
+  list-style: none;
+  transition: max-height 0.4s ease;
+}
+
+.site-header__item>a {
+  text-decoration: none;
+  font-size: 16px;
+  line-height: 24px;
+  color: #CBCBCB;
+  font-weight: 400;
+  font-family: "Inter", sans-serif;
+  padding: 8px 16px;
+  background: #19181D;
+  text-transform: uppercase;
+  border-radius: 10px;
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  transition: all 0.3s ease;
+}
+
+.site-header__item {
+  position: relative;
+}
+
+.site-header__menu li ul.sub-menu {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  background-color: #19181d;
+  margin-top: -8px;
+  border-radius: 0 0 10px 10px;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.4s ease;
+  position: absolute;
+  width: 240px;
+}
+
+.site-header__menu li ul.sub-menu li {
+  margin: 0 0 10px 0;
+}
+
+.site-header__menu li ul.sub-menu li:first-child {
+  margin-top: 20px;
+}
+
+.site-header__menu li ul.sub-menu li:last-child {
+  margin-bottom: 20px;
+}
+
+.site-header__menu li ul.sub-menu li a {
+  width: 100%;
+  display: block;
+  font-size: 16px;
+  line-height: 24px;
+  color: #CBCBCB;
+  font-weight: 400;
+  font-family: "Inter", sans-serif;
+  text-decoration: none;
+  text-transform: uppercase;
+  transition: all 0.3s ease;
+  padding: 0 20px;
+}
+
+.site-header__menu li ul.sub-menu li a:hover {
+  color: var(--orange-1);
+}
+
+.site-header__item span svg {
+  transition: transform 0.3s ease;
+}
+
+.site-header__item>a span {
+  line-height: 0;
+}
+
+.site-header__toggle {
+  display: none;
+  background: none;
+  border: none;
+  color: var(--white);
+  font-size: 2rem;
+  width: 42px;
+  height: 42px;
+  background-color: #ff6801;
+  border-radius: 10px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+}
+
+.site-header__toggle span {
+  width: 20px;
+  height: 2px;
+  background-color: var(--white);
+  border-radius: 10px;
+  position: relative;
+  transition: transform 0.3s ease-in-out;
+}
+
+.site-header__toggle.active-toggle span:first-child {
+  transform: rotate(45deg);
+  top: 6px;
+  left: 1px;
+}
+
+.site-header__toggle.active-toggle span:nth-child(2) {
+  opacity: 0;
+}
+
+.site-header__toggle.active-toggle span:last-child {
+  transform: rotate(-45deg);
+  top: -8px;
+  left: 0px;
+  width: 21px;
+}
+
+.site-cta {
+  padding: 0 0 0 20px;
+  position: relative;
+}
+
+.site-cta:before {
+  content: "";
+  position: absolute;
+  top: -15px;
+  left: 0;
+  width: 1px;
+  height: 14.5px;
+  background: var(--white);
+}
+
+.actions-btn {
+  position: relative;
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  max-width: max-content;
+}
+
+.actions-btn span {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 50px;
+  background: var(--orange-1);
+  border-radius: 10px;
+  padding: 0 25px;
+  text-transform: uppercase;
+  font-size: 16px;
+  line-height: 18px;
+  font-weight: 500;
+  color: var(--white);
+  font-family: "Inter", sans-serif;
+  border: 1px solid var(--orange-1);
+  position: relative;
+  overflow: hidden;
+  transition: color 0.3s ease;
+  z-index: 1;
+}
+
+.actions-btn span.site-cta__arrow {
+  padding: 0 20px;
+  margin: 0 0 0 8px;
+}
+
+.actions-btn span::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: #000;
+  transition: left 0.4s ease;
+  z-index: -1;
+}
+
+.actions-btn:hover span::before {
+  left: 0;
+}
+
+.actions-btn:hover span {
+  color: #fff;
+}
+
+/* Header Section CSS End */
+
+/* Banner Section CSS Start */
+
+.hero-section {
+  padding: 100px 0 58px;
+  position: relative;
+  z-index: 1;
+}
+
+.banner-label {
+  position: absolute;
+  display: flex;
+}
+
+.banner-label span {
+  padding: 12px 25px;
+  border-width: 1px 0 1px 0;
+  border-style: solid;
+  border-color: rgba(255, 255, 255, 50%);
+  position: relative;
+  font-family: Inter;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 18px;
+  letter-spacing: -0.36px;
+  text-transform: uppercase;
+}
+
+.banner-label span:before,
+.banner-label span:after,
+.banner-label:before,
+.banner-label:after {
+  position: absolute;
+  content: '';
+  width: 1px;
+  height: 14px;
+  display: block;
+  background-color: rgba(255, 255, 255, 50%);
+  top: 0;
+  left: 0;
+}
+
+.banner-label span:after {
+  left: auto;
+  right: 0;
+}
+
+.banner-label:before {
+  top: auto;
+  bottom: 0;
+}
+
+.banner-label:after {
+  left: auto;
+  right: 0;
+  top: auto;
+  bottom: 0;
+}
+
+.banner-label.first {
+  left: auto;
+  right: 170px;
+  top: 0;
+  bottom: 0;
+  margin: auto 0;
+  height: max-content;
+}
+
+.banner-label.second {
+  left: 110px;
+}
+
+.hero-title {
+  text-align: center;
+}
+
+.hero-title h1,
+.hero-title h2 {
+  margin: 0 0 25px;
+  font-size: 134px;
+  line-height: 120px;
+  color: #DDDDDD;
+  font-weight: 400;
+  font-family: 'Whyte Inktrap';
+  text-transform: uppercase;
+}
+
+.hero-title h1 span,
+.hero-title h2 span {
+  display: block;
+  color: var(--orange-1);
+  font-family: 'Parabole';
+}
+
+.hero-title p {
+  font-size: 20px;
+  line-height: 30px;
+  color: var(--white);
+  font-weight: 300;
+}
+
+/* Banner Section CSS End */
+
+/* Chatbox Section CSS Start */
+
+.chatbox {
+  position: relative;
+  padding: 0 20px 150px;
+  background: #fff;
+}
+
+.chatbox__svg {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 0;
+}
+
+.chatbox__svg img {
+  width: 100%;
+}
+
+.chatbox__container {
+  border-radius: 20px;
+  width: 782px;
+  max-width: 782px;
+  height: min-content;
+  padding: 6px;
+  position: relative;
+  overflow: hidden;
+  margin: 0 auto -90px;
+  z-index: 1;
+}
+
+.chatbox__border {
+  background: url(../images/border-image.webp);
+  background-size: cover;
+  opacity: 1;
+  will-change: transform;
+  position: absolute;
+  inset: -345px -164px;
+  overflow: hidden;
+  animation: rotate-gradient 10s linear infinite;
+  transform-origin: center center;
+}
+
+@keyframes rotate-gradient {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.chatbox__content {
+  background-color: var(--color-black, rgb(0, 0, 0));
+  border-radius: 16px;
+  opacity: 1;
+  will-change: var(--framer-will-change-override, transform);
+  flex-flow: column;
+  flex: none;
+  place-content: flex-start;
+  align-items: flex-start;
+  gap: 24px;
+  width: 100%;
+  height: min-content;
+  padding: 16px;
+  display: flex;
+  position: relative;
+  overflow: hidden;
+}
+
+.chatbox__header {
+  flex-flow: row;
+  align-items: flex-start;
+  gap: 8.14286px;
+  display: flex;
+  position: relative;
+}
+
+.chatbox__header button {
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(2px);
+  border-radius: 8px;
+  opacity: 1;
+  flex-flow: row;
+  align-items: center;
+  gap: 10px;
+  padding: 8px 12px;
+  display: flex;
+  position: relative;
+  background: transparent;
+  cursor: pointer;
+}
+
+.chatbox__header button.chatbox__language-select {
+  padding: 8px;
+}
+
+.chatbox__header button .chatbox__model-name {
+  font-size: 14px;
+  line-height: 1.5em;
+  font-weight: 500;
+  color: var(--white);
+  min-width: 80px;
+  text-align: left;
+}
+
+.chatbox__header button svg {
+  opacity: 0.6;
+}
+
+.chatbox__footer {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.chatbox__actions {
+  display: flex;
+  align-items: center;
+  gap: 8.14286px;
+}
+
+.chatbox__actions button.chatbox__button {
+  background: transparent;
+  padding: 8px 12px;
+  display: flex;
+  align-items: center;
+  position: relative;
+  border-radius: 8px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(6px);
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.5em;
+  color: var(--white);
+  cursor: pointer;
+}
+
+.chatbox__send-btn {
+  z-index: 1;
+  flex-flow: row;
+  align-items: center;
+  gap: 4px;
+  width: min-content;
+  height: min-content;
+  padding: 6px 12px;
+  display: flex;
+  position: relative;
+  background: transparent;
+  border: none;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.chatbox__send-icon {
+  height: 24px;
+  width: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  z-index: 1;
+}
+
+.chatbox__send-icon img {
+  width: 100%;
+}
+
+.chatbox__send-text {
+  position: relative;
+  z-index: 1;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.5em;
+  color: var(--white);
+}
+
+.typewriter {
+  font-size: 17px;
+  font-weight: 500;
+  color: var(--white);
+  line-height: 1.2em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.typewriter__wrapper {
+  display: inline-flex;
+  align-items: center;
+}
+
+.typewriter__text {
+  white-space: nowrap;
+  overflow: hidden;
+  display: inline-block;
+  border-right: none;
+}
+
+.typewriter__cursor {
+  display: inline-block;
+  width: 2px;
+  height: 1.2em;
+  background: var(--white);
+  margin-left: 4px;
+  animation: blink 1s steps(2, start) infinite;
+}
+
+@keyframes blink {
+  50% {
+    opacity: 0;
+  }
+}
+
+.chatbox__dashboard-one {
+  position: relative;
+  overflow: hidden;
+  text-align: center;
+  border-bottom: 1px solid var(--black-5);
+}
+
+.chatbox__dashboard-one:before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 1px;
+  height: 14.5px;
+  background: var(--black-5);
+}
+
+.chatbox__dashboard-one:after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 1px;
+  height: 14.5px;
+  background: var(--black-5);
+}
+
+.explore-services-actions {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 0 20px 15px;
+}
+
+.explore-services-actions:before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 1px;
+  height: 14.5px;
+  background: var(--black-5);
+}
+
+.explore-services-actions:after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 1px;
+  height: 14.5px;
+  background: var(--black-5);
+}
+
+.explore-services-actions .actions-btn span {
+  background: var(--black-1);
+  border-color: var(--black-1);
+}
+
+.explore-services-actions .actions-btn span::before {
+  content: "";
+  position: absolute;
+  top: -100%;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: var(--orange-1);
+  transition: top 0.4s ease;
+  z-index: -1;
+}
+
+.explore-services-actions .actions-btn:hover span::before {
+  top: 0;
+}
+
+.site-cta__framer-1 {
+  background: radial-gradient(50% 50%, var(--orange-1), var(--orange-1));
+  border-radius: 100%;
+  filter: blur(3px);
+  height: 36px;
+  position: absolute;
+  top: -4px;
+  left: 9px;
+  right: 9px;
+  display: none;
+}
+
+.site-cta__framer-2 {
+  background-color: var(--orange-1);
+  border-radius: 100%;
+  filter: blur(10px);
+  opacity: 0.6;
+  height: 7px;
+  position: absolute;
+  top: 1px;
+  left: 0;
+  right: 0;
+}
+
+.site-cta__framer-3 {
+  background: linear-gradient(163deg, var(--orange-1) 0%, var(--orange-1) 40%, #000000 70%, #0098F3 100%);
+  border-radius: 8px;
+  position: absolute;
+  inset: 0;
+}
+
+.site-cta__framer-4 {
+  background-color: #000;
+  border-radius: 8px;
+  position: absolute;
+  inset: 1px;
+}
+
+/* Chatbox Section CSS End */
+
+@media screen and (max-width: 1700px) {
+  .banner-label.first {
+    right: 50px;
+  }
+
+  .banner-label.second {
+    left: 50px;
+  }
+}
+
+@media screen and (max-width: 1600px) {
+  .chatbox__svg {
+    bottom: 50px;
+  }
+}
+
+@media screen and (max-width: 1440px) {
+  .banner-label span {
+    padding: 12px 15px;
+    font-size: 14px;
+  }
+
+  .hero-title h1,
+  .hero-title h2 {
+    margin: 0 0 20px;
+    font-size: 110px;
+  }
+}
+
+@media screen and (max-width: 1400px) {
+  .site-header__left {
+    gap: 40px;
+  }
+}
+
+@media screen and (max-width: 1300px) {
+  .site-header__inner {
+    padding: 15px 15px 0;
+  }
+
+  .site-header__left {
+    gap: 30px;
+  }
+
+  .site-header__item>a {
+    font-size: 15px;
+    padding: 8px 14px;
+    gap: 10px;
+  }
+
+  .site-header__nav {
+    padding-right: 15px;
+  }
+
+  .actions-btn span {
+    padding: 0 20px;
+  }
+
+  .site-cta {
+    padding: 0 0 0 15px;
+  }
+
+  .hero-title h1,
+  .hero-title h2 {
+    font-size: 104px;
+    line-height: 90px;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .site-header__left {
+    gap: 20px;
+  }
+
+  .site-header__left a.site-header__brand img.img-fluid {
+    max-width: 200px;
+  }
+
+  .site-header__item>a {
+    padding: 8px 12px;
+  }
+
+  .site-header__nav:after {
+    top: -17px;
+  }
+
+  .site-header__item>a {
+    font-size: 14px;
+  }
+
+  .actions-btn span {
+    padding: 0 15px;
+    font-size: 15px;
+    min-height: 43px;
+  }
+
+  .actions-btn span.site-cta__arrow {
+    padding: 0 15px;
+  }
+
+  .actions-btn span {
+    font-size: 14px;
+  }
+
+  .banner-label.first {
+    right: 20px;
+  }
+
+  .banner-label span {
+    padding: 10px 10px;
+    font-size: 13px;
+  }
+
+  .hero-title h1,
+  .hero-title h2 {
+    font-size: 90px;
+    line-height: 1;
+  }
+
+  .banner-label.second {
+    left: 20px;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .site-header__left a.site-header__brand img.img-fluid {
+    max-width: 180px;
+  }
+
+  .site-header__item>a {
+    font-size: 14px;
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  .actions-btn span {
+    font-size: 14px;
+    min-height: 42px;
+  }
+
+  .hero-section {
+    padding: 80px 0 50px;
+  }
+
+  .hero-title h1,
+  .hero-title h2 {
+    font-size: 74px;
+    line-height: 64px;
+  }
+
+  .chatbox {
+    padding: 0 20px 80px;
+  }
+
+  .chatbox__svg {
+    bottom: 150px;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .site-header__item:hover>a {
+    color: var(--orange-1);
+  }
+
+  .site-header__item:hover span svg {
+    transform: rotate(180deg);
+  }
+
+  .site-header__item:hover>a svg path {
+    fill: var(--orange-1);
+  }
+}
+
+@media screen and (max-width: 991px) {
+  .site-header__toggle {
+    display: flex;
+  }
+
+  .site-header__nav:after {
+    display: none;
+  }
+
+  .site-header .site-cta {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+  }
+
+  .site-header__inner {
+    padding: 10px 15px 0;
+  }
+
+  ul.site-header__menu {
+    flex-direction: column;
+    position: absolute;
+    width: 100%;
+    left: 0;
+    top: 52px;
+    background-color: #19181d;
+    z-index: 9;
+    overflow: scroll;
+  }
+
+  nav.site-header__nav {
+    position: unset;
+  }
+
+  .site-header__menu li ul.sub-menu {
+    position: relative;
+    width: 100%;
+    margin-top: 0;
+  }
+
+  .site-header__menu li ul.sub-menu li:first-child {
+    margin-top: 10px;
+  }
+
+  .site-header__menu li ul.sub-menu li:last-child {
+    margin-bottom: 10px;
+  }
+
+  .site-header__menu li ul.sub-menu li a {
+    font-size: 14px;
+    line-height: 1.2;
+    padding: 0 30px;
+  }
+
+  .site-header__item>a span {
+    width: 20px;
+    height: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .site-header__item>a.active {
+    color: #ff6801;
+  }
+
+  .site-header__item>a.active svg {
+    transform: rotate(180deg);
+    transition: transform 0.3s ease;
+  }
+
+  .site-header__item>a.active svg path {
+    fill: #ff6801;
+  }
+
+  .site-header__menu {
+    overflow: hidden;
+    max-height: 0;
+  }
+
+  .site-cta:before {
+    top: -10px;
+  }
+
+  .hero-section {
+    padding: 50px 0 50px;
+  }
+
+  .hero-title h1,
+  .hero-title h2 {
+    font-size: 60px;
+    line-height: 56px;
+  }
+
+  .banner-label {
+    display: none;
+  }
+
+  .chatbox {
+    padding: 0 20px 60px;
+  }
+
+  .chatbox__svg {
+    bottom: 250px;
+  }
+
+  .chatbox__container {
+    width: 85%;
+    max-width: 85%;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .site-header a.actions-btn span.site-cta__arrow {
+    display: none;
+  }
+
+  .site-header .site-cta {
+    gap: 10px;
+  }
+
+  .site-header__left a.site-header__brand img.img-fluid {
+    max-width: 120px;
+  }
+
+  .chatbox {
+    padding: 0 0px 60px;
+  }
+
+  .chatbox__svg {
+    bottom: 580px;
+  }
+
+  .chatbox__container {
+    width: calc(100% - 40px);
+    max-width: 100%;
+    margin: 0 20px;
+  }
+
+  .explore-services-actions {
+    min-width: 230px;
+  }
+}
+
+@media (max-width: 600px) {
+  .typewriter {
+    font-size: 15px;
+  }
+
+  .chatbox__footer {
+    flex-direction: column;
+  }
+
+  .chatbox__actions {
+    overflow: scroll;
+    margin: 0 0px 20px 0px;
+    align-items: flex-start;
+    width: 100%;
+  }
+
+  .chatbox__actions button.chatbox__button {
+    white-space: nowrap;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .site-header__left {
+    gap: 0;
+  }
+
+  .site-header {
+    padding: 16px 10px;
+  }
+
+  .site-header__inner {
+    padding: 10px 10px 0;
+    gap: 0;
+  }
+
+  .site-header__toggle {
+    width: 34px;
+    height: 34px;
+    border-radius: 5px;
+  }
+
+  .actions-btn span {
+    font-size: 13px;
+    min-height: 34px;
+    padding: 0 10px;
+    border-radius: 5px;
+  }
+
+  .hero-title h1,
+  .hero-title h2 {
+    font-size: 42px;
+    line-height: 1.2;
+  }
+}
