@@ -2024,6 +2024,7 @@ body {
 .footer-social {
   /* margin: 180px 0 0; */
   margin: 30px 0 0 0;
+  display: none !important;
 }
 
 .footer-social ul {
