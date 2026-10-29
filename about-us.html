@@ -24,141 +24,134 @@
 
     <!-- Structured Data -->
     <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@graph": [
         {
-          "@type": "Organization",
-          "@id": "https://www.thenovaai.com/#organization",
-          "name": "The Nova AI",
-          "alternateName": "Nova AI",
-          "url": "https://www.thenovaai.com/",
-          "logo": {
-            "@type": "ImageObject",
-            "url": "https://www.thenovaai.com/assets/images/logo.png",
-            "width": 512,
-            "height": 512
-          },
-          "description": "The Nova AI is a specialized AI engineering studio focused on building production-ready intelligent systems.",
-          "slogan": "Elite AI engineering for the businesses that shape tomorrow.",
-          "email": "info@thenovaai.com",
-          "telephone": "+91-96102-36549",
-          "address": {
-            "@type": "PostalAddress",
-            "streetAddress": "Office 706, Rivera Wave, Kalavad Rd, Near McDonald's, Jai Bhimnagar, Nana Mava",
-            "addressLocality": "Rajkot",
-            "addressRegion": "Gujarat",
-            "postalCode": "360005",
-            "addressCountry": "IN"
-          },
-          "contactPoint": {
-            "@type": "ContactPoint",
-            "telephone": "+91-96102-36549",
-            "email": "info@thenovaai.com",
-            "hoursAvailable": {
-              "@type": "OpeningHoursSpecification",
-              "dayOfWeek": [
-                "Monday",
-                "Tuesday",
-                "Wednesday",
-                "Thursday",
-                "Friday"
-              ],
-              "opens": "10:00",
-              "closes": "19:00"
-            }
-          },
-          "sameAs": [
-            "javascript:;",
-            "javascript:;"
-          ]
-        },
-        {
-          "@type": "WebSite",
-          "@id": "https://www.thenovaai.com/#website",
-          "url": "https://www.thenovaai.com/",
-          "name": "The Nova AI",
-          "alternateName": "Nova AI",
-          "publisher": {
-            "@id": "https://www.thenovaai.com/#organization"
-          }
-        },
-        {
-          "@type": "AboutPage",
-          "@id": "https://www.thenovaai.com/about-us#webpage",
-          "url": "https://www.thenovaai.com/about-us",
-          "name": "Intelligence Built for Impact",
-          "isPartOf": {
-            "@id": "https://www.thenovaai.com/#website"
-          },
-          "mainEntity": {
-            "@id": "https://www.thenovaai.com/#organization"
-          }
-        },
-        {
-          "@type": "FAQPage",
-          "@id": "https://www.thenovaai.com/about-us#faq",
-          "mainEntity": [
-            {
-              "@type": "Question",
-              "name": "What types of businesses do you work with?",
-              "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "We work with startups, small businesses, agencies, and enterprise organizations across various industries."
-              }
-            },
-            {
-              "@type": "Question",
-              "name": "Do I need technical knowledge to use AI solutions?",
-              "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "No. We handle the technical implementation and provide guidance to ensure a smooth experience."
-              }
-            },
-            {
-              "@type": "Question",
-              "name": "How do I know if AI is right for my business?",
-              "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "We start with a discovery session to understand your processes and identify areas where AI can create measurable value."
-              }
-            },
-            {
-              "@type": "Question",
-              "name": "Can you build custom AI solutions?",
-              "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "Yes. We develop tailored solutions based on your specific business requirements and workflows."
-              }
-            },
-            {
-              "@type": "Question",
-              "name": "Do you integrate AI with existing tools?",
-              "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "Yes. We can integrate AI with CRM systems, websites, help desks, databases, email platforms, and other business applications."
-              }
-            },
-            {
-              "@type": "Question",
-              "name": "Can you train our team to use the solution?",
-              "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "Yes. We provide onboarding, documentation, and training sessions."
-              }
-            },
-            {
-              "@type": "Question",
-              "name": "Can I book a consultation before starting?",
-              "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "Absolutely. We offer consultations to discuss your goals and identify the best AI opportunities for your business."
-              }
-            }
-          ]
+            "@context": "https://schema.org",
+            "@graph": [
+                {
+                "@type": "Organization",
+                "@id": "https://www.thenovaai.com/#organization",
+                "name": "The Nova AI",
+                "alternateName": "Nova AI",
+                "url": "https://www.thenovaai.com/",
+                "logo": {
+                    "@type": "ImageObject",
+                    "url": "https://www.thenovaai.com/assets/images/logo.svg"
+                },
+                "description": "The Nova AI is a specialized AI engineering studio focused on building production-ready intelligent systems.",
+                "slogan": "Elite AI engineering for the businesses that shape tomorrow.",
+                "email": "info@thenovaai.com",
+                "telephone": "+91-96102-36549",
+                "address": {
+                    "@type": "PostalAddress",
+                    "streetAddress": "Office 706, Rivera Wave, Kalavad Rd, Near McDonald's, Jai Bhimnagar, Nana Mava",
+                    "addressLocality": "Rajkot",
+                    "addressRegion": "Gujarat",
+                    "postalCode": "360005",
+                    "addressCountry": "IN"
+                },
+                "contactPoint": {
+                    "@type": "ContactPoint",
+                    "contactType": "customer support",
+                    "telephone": "+91-96102-36549",
+                    "email": "info@thenovaai.com",
+                    "hoursAvailable": {
+                    "@type": "OpeningHoursSpecification",
+                    "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+                    "opens": "10:00",
+                    "closes": "19:00"
+                    }
+                }
+                },
+                {
+                "@type": "WebSite",
+                "@id": "https://www.thenovaai.com/#website",
+                "url": "https://www.thenovaai.com/",
+                "name": "The Nova AI",
+                "alternateName": "Nova AI",
+                "publisher": { "@id": "https://www.thenovaai.com/#organization" }
+                },
+                {
+                "@type": "AboutPage",
+                "@id": "https://www.thenovaai.com/about-us#webpage",
+                "url": "https://www.thenovaai.com/about-us",
+                "name": "Intelligence Built for Impact",
+                "isPartOf": { "@id": "https://www.thenovaai.com/#website" },
+                "mainEntity": { "@id": "https://www.thenovaai.com/#organization" }
+                },
+                {
+                "@type": "FAQPage",
+                "@id": "https://www.thenovaai.com/about-us#faq",
+                "url": "https://www.thenovaai.com/about-us",
+                "isPartOf": { "@id": "https://www.thenovaai.com/#website" },
+                "mainEntity": [
+                    {
+                    "@type": "Question",
+                    "name": "What does The Nova AI do?",
+                    "acceptedAnswer": {
+                        "@type": "Answer",
+                        "text": "The Nova AI is an AI engineering studio that builds production-ready intelligent systems. Our services include LLM integration, AI agent development, predictive analytics, custom model training, computer vision, generative AI solutions, and machine learning development."
+                    }
+                    },
+                    {
+                    "@type": "Question",
+                    "name": "What types of businesses do you work with?",
+                    "acceptedAnswer": {
+                        "@type": "Answer",
+                        "text": "We work with startups, small businesses, agencies, and enterprise organizations across various industries."
+                    }
+                    },
+                    {
+                    "@type": "Question",
+                    "name": "How is The Nova AI related to Cypherox?",
+                    "acceptedAnswer": {
+                        "@type": "Answer",
+                        "text": "Some of our projects are delivered in partnership with Cypherox. These projects are labelled \"In Partnership with Cypherox\" in our portfolio."
+                    }
+                    },
+                    {
+                    "@type": "Question",
+                    "name": "Do you build custom solutions or use off-the-shelf tools?",
+                    "acceptedAnswer": {
+                        "@type": "Answer",
+                        "text": "We build custom AI systems designed around your workflows, data, and goals. We use established models such as GPT-4o, Claude, Gemini, and open-source LLMs where they fit, but every solution is engineered for your specific challenge."
+                    }
+                    },
+                    {
+                    "@type": "Question",
+                    "name": "Do I need technical knowledge to work with you?",
+                    "acceptedAnswer": {
+                        "@type": "Answer",
+                        "text": "No. We handle the technical implementation and provide guidance so your team can use the solution with confidence."
+                    }
+                    },
+                    {
+                    "@type": "Question",
+                    "name": "How do you approach a new AI project?",
+                    "acceptedAnswer": {
+                        "@type": "Answer",
+                        "text": "We follow five stages: we understand your workflows and goals, design the AI solution, build a scalable production-ready system, deploy it into your operations, and optimize its performance over time."
+                    }
+                    },
+                    {
+                    "@type": "Question",
+                    "name": "Can you integrate AI with our existing tools?",
+                    "acceptedAnswer": {
+                        "@type": "Answer",
+                        "text": "Yes. We integrate AI with CRM systems, websites, help desks, databases, email platforms, and other business applications."
+                    }
+                    },
+                    {
+                    "@type": "Question",
+                    "name": "Will you train our team to use the solution?",
+                    "acceptedAnswer": {
+                        "@type": "Answer",
+                        "text": "Yes. We provide onboarding, documentation, and training sessions so your team can use and manage the solution."
+                    }
+                    }
+                ]
+                }
+            ]
         }
-      ]
-    }
     </script>
 
     <!-- Favicon -->
@@ -613,38 +606,43 @@
             <div class="about-faq-wrapper">
                 <div class="faq-content-col-inner">
                     <div class="faq-item active" data-id="q1">
+                        <div class="faq-question">What does The Nova AI do?</div>
+                        <div class="faq-answer">The Nova AI is an AI engineering studio that builds production-ready intelligent systems. Our services include LLM integration, AI agent development, predictive analytics, custom model training, computer vision, generative AI solutions, and machine learning development.</div>
+                    </div>
+
+                    <div class="faq-item" data-id="q2">
                         <div class="faq-question">What types of businesses do you work with?</div>
                         <div class="faq-answer">We work with startups, small businesses, agencies, and enterprise organizations across various industries.</div>
                     </div>
 
-                    <div class="faq-item" data-id="q2">
-                        <div class="faq-question">Do I need technical knowledge to use AI solutions?</div>
-                        <div class="faq-answer">No. We handle the technical implementation and provide guidance to ensure a smooth experience.</div>
-                    </div>
-
                     <div class="faq-item" data-id="q3">
-                        <div class="faq-question">How do I know if AI is right for my business?</div>
-                        <div class="faq-answer">We start with a discovery session to understand your processes and identify areas where AI can create measurable value.</div>
+                        <div class="faq-question">How is The Nova AI related to Cypherox?</div>
+                        <div class="faq-answer">Some of our projects are delivered in partnership with Cypherox. These projects are labelled “In Partnership with Cypherox” in our portfolio.</div>
                     </div>
 
                     <div class="faq-item" data-id="q4">
-                        <div class="faq-question">Can you build custom AI solutions?</div>
-                        <div class="faq-answer">Yes. We develop tailored solutions based on your specific business requirements and workflows.</div>
+                        <div class="faq-question">Do you build custom solutions or use off-the-shelf tools?</div>
+                        <div class="faq-answer">We build custom AI systems designed around your workflows, data, and goals. We use established models such as GPT-4o, Claude, Gemini, and open-source LLMs where they fit, but every solution is engineered for your specific challenge.</div>
                     </div>
 
                     <div class="faq-item" data-id="q5">
-                        <div class="faq-question">Do you integrate AI with existing tools?</div>
-                        <div class="faq-answer">Yes. We can integrate AI with CRM systems, websites, help desks, databases, email platforms, and other business applications.</div>
+                        <div class="faq-question">Do I need technical knowledge to work with you?</div>
+                        <div class="faq-answer">No. We handle the technical implementation and provide guidance so your team can use the solution with confidence.</div>
                     </div>
 
                     <div class="faq-item" data-id="q6">
-                        <div class="faq-question">Can you train our team to use the solution?</div>
-                        <div class="faq-answer">Yes. We provide onboarding, documentation, and training sessions.</div>
+                        <div class="faq-question">How do you approach a new AI project?</div>
+                        <div class="faq-answer">We follow five stages: we understand your workflows and goals, design the AI solution, build a scalable production-ready system, deploy it into your operations, and optimize its performance over time.</div>
                     </div>
 
                     <div class="faq-item" data-id="q7">
-                        <div class="faq-question">Can I book a consultation before starting?</div>
-                        <div class="faq-answer">Absolutely. We offer consultations to discuss your goals and identify the best AI opportunities for your business.</div>
+                        <div class="faq-question">Can you integrate AI with our existing tools?</div>
+                        <div class="faq-answer">Yes. We integrate AI with CRM systems, websites, help desks, databases, email platforms, and other business applications.</div>
+                    </div>
+
+                    <div class="faq-item" data-id="q8">
+                        <div class="faq-question">Will you train our team to use the solution?</div>
+                        <div class="faq-answer">Yes. We provide onboarding, documentation, and training sessions so your team can use and manage the solution.</div>
                     </div>
 
                 </div>
