@@ -2121,6 +2121,10 @@ body {
   font-weight: 300;
 }
 
+.schedule-demo-col-inner p br {
+  display: none;
+}
+
 .footer-bottom {
   display: flex;
   align-items: center;
@@ -6483,6 +6487,12 @@ section.schedule-demo-popup-main.active {
   overflow: hidden;
   max-height: 0;
   transition: max-height 0.3s ease, margin-top 0.3s ease;
+}
+
+.faq-answer > a {
+  color: var(--orange-1);
+  font-weight: 500;
+  text-decoration: none;
 }
 
 .about-faq-wrapper {
