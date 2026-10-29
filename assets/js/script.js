@@ -223,45 +223,51 @@ if (toggleBtn && menu) {
 
 /* Impact Showcase Section JS Start */
 
-$(document).ready(function () {
-  $('.impact-showcase-box').slick({
-    infinite: true,
-    slidesToShow: 4,
-    slidesToScroll: 1,
-    arrows: false,
-    dots: false,
-    speed: 8000,
-    autoplay: true,
-    autoplaySpeed: 0,
-    cssEase: 'linear',
-    pauseOnHover: false,
-    pauseOnFocus: false,
-    variableWidth: true
+if (document.querySelector(".impact-showcase-box")) {
+  $(document).ready(function () {
+    $('.impact-showcase-box').slick({
+      infinite: true,
+      slidesToShow: 4,
+      slidesToScroll: 1,
+      arrows: false,
+      dots: false,
+      speed: 8000,
+      autoplay: true,
+      autoplaySpeed: 0,
+      cssEase: 'linear',
+      pauseOnHover: false,
+      pauseOnFocus: false,
+      variableWidth: true
+    });
   });
-});
+}
 
 /* Impact Showcase Section JS End */
 
 
 /* Partners Section JS Start */
 
-$(document).ready(function () {
-  $('.partners-section-box').slick({
-    infinite: true,
-    slidesToShow: 4,
-    slidesToScroll: 1,
-    arrows: false,
-    dots: false,
-    speed: 6000,
-    autoplay: true,
-    autoplaySpeed: 0,
-    cssEase: 'linear',
-    pauseOnHover: false,
-    pauseOnFocus: false,
-    variableWidth: true,
-    rtl: true,
+if (document.querySelector(".partners-section-box")) {
+
+  $(document).ready(function () {
+    $('.partners-section-box').slick({
+      infinite: true,
+      slidesToShow: 4,
+      slidesToScroll: 1,
+      arrows: false,
+      dots: false,
+      speed: 6000,
+      autoplay: true,
+      autoplaySpeed: 0,
+      cssEase: 'linear',
+      pauseOnHover: false,
+      pauseOnFocus: false,
+      variableWidth: true,
+      rtl: true,
+    });
   });
-});
+
+}
 
 /* Partners Section JS End */
 
@@ -495,58 +501,61 @@ document.addEventListener("DOMContentLoaded", function () {
 
 document.addEventListener("DOMContentLoaded", function () {
 
-  gsap.registerPlugin(ScrollTrigger);
+  if (document.querySelector(".work-content")) {
 
-  const mm = gsap.matchMedia();
+    gsap.registerPlugin(ScrollTrigger);
 
-  mm.add("(min-width: 768px)", () => {
+    const mm = gsap.matchMedia();
 
-    const sections = gsap.utils.toArray(".work-content");
+    mm.add("(min-width: 768px)", () => {
 
-    gsap.set(sections, {
-      y: 120,
-      opacity: 0,
-      scale: 0.95
-    });
+      const sections = gsap.utils.toArray(".work-content");
 
-    let tl = gsap.timeline({
-      scrollTrigger: {
-        trigger: ".work-main-sec",
-        start: "top top",
-        end: () => "+=" + (window.innerHeight * sections.length),
-        scrub: 1.5,
-        pin: true
-      }
-    });
-
-    sections.forEach((section, i) => {
-
-      tl.to(section, {
-        y: 0,
-        opacity: 1,
-        scale: 1,
-        duration: 1.2,
-        ease: "power6.out"
+      gsap.set(sections, {
+        y: 120,
+        opacity: 0,
+        scale: 0.95
       });
 
-      if (i !== sections.length - 1) {
+      let tl = gsap.timeline({
+        scrollTrigger: {
+          trigger: ".work-main-sec",
+          start: "top top",
+          end: () => "+=" + (window.innerHeight * sections.length),
+          scrub: 1.5,
+          pin: true
+        }
+      });
+
+      sections.forEach((section, i) => {
+
         tl.to(section, {
-          y: -80,
-          opacity: 0,
-          scale: 0.85,
-          duration: 1,
-          ease: "power2.inOut"
+          y: 0,
+          opacity: 1,
+          scale: 1,
+          duration: 1.2,
+          ease: "power6.out"
         });
-      }
+
+        if (i !== sections.length - 1) {
+          tl.to(section, {
+            y: -80,
+            opacity: 0,
+            scale: 0.85,
+            duration: 1,
+            ease: "power2.inOut"
+          });
+        }
+
+      });
+
+      return () => {
+        ScrollTrigger.getAll().forEach(trigger => trigger.kill());
+        gsap.killTweensOf(sections);
+      };
 
     });
-
-    return () => {
-      ScrollTrigger.getAll().forEach(trigger => trigger.kill());
-      gsap.killTweensOf(sections);
-    };
-
-  });
+  }
 
 });
 
